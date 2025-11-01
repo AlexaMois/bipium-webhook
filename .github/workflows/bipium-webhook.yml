@@ -2,7 +2,7 @@ name: Daily Bipium Webhook
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # UTC время (09:00 МСК)
+    - cron: '0 1 * * *'  # UTC время (08:00 KRSK)
   workflow_dispatch:  # Для ручного запуска
 
 jobs:

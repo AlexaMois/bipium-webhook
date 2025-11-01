@@ -1,0 +1,14 @@
+name: Daily Bipium Webhook
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # UTC время (09:00 МСК)
+  workflow_dispatch:  # Для ручного запуска
+
+jobs:
+  call-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Bipium Webhook
+        run: |
+          curl -sS "https://kps.bpium.ru/api/webrequest/contracts-daily?async=true"
